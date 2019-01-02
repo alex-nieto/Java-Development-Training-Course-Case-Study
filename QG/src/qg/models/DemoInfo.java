@@ -1,5 +1,11 @@
 package qg.models;
 
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * <h1>DemoInfo Class</h1>
  * <p>Holds the demographic info for a customer</p>
@@ -7,15 +13,31 @@ package qg.models;
  * @version 1.0
  * @since 2018-11-20
  */
+@Entity
+@Table(name = "Demographics")
 public class DemoInfo{
     
     //Private data members:
+	@Id
+	@Column(name = "id")
     private int ID;
+	@Basic
+	@Column(name = "gender")
     private String gender;
+	@Basic
+	@Column(name = "sex")
     private String sex;
+	@Basic
+	@Column(name = "transgender")
     private boolean transgender;
+	@Basic
+	@Column(name = "sexualorientation")
     private String sexOrientation;
+	@Basic
+	@Column(name = "latinx")
     private boolean latinx;
+	@Basic
+	@Column(name = "race")
     private String race;
     
     //Constructors:

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="QG">
+	<class>qg.models.Person</class>
+	<class>qg.models.DemoInfo</class>
+	<class>qg.models.Address</class>
+	<class>qg.models.User</class>
+	<class>qg.models.BusinessRep</class>
+	<class>qg.models.Business</class>
+	<class>qg.models.Customer</class>
+	<class>qg.models.Review</class>
+	<properties>
+		<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@//localhost:1521/alexsys"/>
+		<property name="javax.persistence.jdbc.user" value="alexsys"/>
+		<property name="javax.persistence.jdbc.password" value="password"/>
+		<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.driver.OracleDriver"/>
+		<property name="eclipselink.logging.level" value="FINE"/>
+	</properties>
+	</persistence-unit>
+</persistence>

@@ -1,5 +1,11 @@
 package qg.models;
 
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * <h1>User Class</h1>
  * <p>Holds address info for a customer or business</p>
@@ -7,14 +13,28 @@ package qg.models;
  * @version 1.0
  * @since 2018-11-20
  */
+@Entity
+@Table(name = "Addres")
 public class Address{
     
     //Private data members:
+	@Id
+	@Column(name = "id")
     private int ID;
+	@Basic
+	@Column(name = "streetaddress")
     private String street;
+	@Basic
+	@Column(name = "city")
     private String city;
+	@Basic
+	@Column(name = "state")
     private String state;
+	@Basic
+	@Column(name = "zipcode")
     private String zipcode;
+	@Basic
+	@Column(name = "country")
     private String country;
     
     //Constructors:

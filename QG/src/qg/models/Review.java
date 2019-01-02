@@ -2,6 +2,13 @@ package qg.models;
 
 import java.util.Date;
 
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
 /**
  * <h1>Review Class</h1>
  * <p>Holds the info for a review</p>
@@ -9,16 +16,32 @@ import java.util.Date;
  * @version 1.0
  * @since 2018-11-20
  */
+@Entity
+@Table(name = "Review")
 public class Review {
 
     //Private data members:
+	@Id
+	@Column(name = "id")
     private int ID;
+	@Basic
+	@Column(name = "rdate")
     private Date rdate;
+	@Basic
+	@Column(name = "safe")
 	private boolean safe;
+	@Basic
+	@Column(name = "tsafe")
 	private boolean tsafe;
+	@Basic
+	@Column(name = "rating")
 	private int rating;
+	@Basic
+	@Column(name = "notes")
 	private String notes;
+	@OneToOne
 	private Customer cust;
+	@OneToOne
 	private Business bus;
 	
 	//Constructors:

@@ -1,5 +1,10 @@
 package qg.models;
 
+import javax.persistence.Entity;
+import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.Table;
+
 /**
  * <h1>Customer Class</h1>
  * <p>Holds all info for a customer</p>
@@ -7,10 +12,15 @@ package qg.models;
  * @version 1.0
  * @since 2018-11-20
  */
+@Entity
+@Table(name = "Customer")
+@PrimaryKeyJoinColumn(referencedColumnName = "id")
 public class Customer extends User {
 
     //Private data members:
+	@OneToOne
     private DemoInfo demoInfo;
+	@OneToOne
 	private Address custAddress;
     
     //Constructors:

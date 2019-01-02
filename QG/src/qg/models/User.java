@@ -1,5 +1,13 @@
 package qg.models;
 
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.Table;
+
 /**
  * <h1>User Class</h1>
  * <p>Holds the info for a user</p>
@@ -7,10 +15,18 @@ package qg.models;
  * @version 1.0
  * @since 2018-11-20
  */
+@Entity
+@Table(name = "User")
+@PrimaryKeyJoinColumn(referencedColumnName = "id")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class User extends Person{
 
 	//Private data members:
+	@Basic
+	@Column(name = "email")
 	private String email;
+	@Basic
+	@Column(name = "password")
 	private String password;;
 	
 	//Constructors:

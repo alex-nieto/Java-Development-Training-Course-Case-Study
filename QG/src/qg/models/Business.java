@@ -1,5 +1,12 @@
 package qg.models;
 
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
 /**
  * <h1>Business Class</h1>
  * <p>Holds all info for a business</p>
@@ -7,18 +14,37 @@ package qg.models;
  * @version 1.0
  * @since 2018-11-20
  */
+@Entity
+@Table(name = "Company")
 public class Business {
 
     //Private data members:
+	@Id
+	@Column(name = "id")
 	private int ID;
+	@Basic
+	@Column(name = "name")
 	private String name;
+	@Basic
+	@Column(name = "website")
 	private String website;
+	@Basic
+	@Column(name = "comptype")
 	private String type;
+	@Basic
+	@Column(name = "rating")
 	private int avgRating;
+	@Basic
+	@Column(name = "safe")
 	private boolean safe;
+	@Basic
+	@Column(name = "tsafe")
 	private boolean tsafe;
+	@Basic
+	@Column(name = "self")
 	private boolean self;
-	private Address busAddress;
+	@OneToOne
+	Address busAddress;
 	
 	//Constructors:
 	

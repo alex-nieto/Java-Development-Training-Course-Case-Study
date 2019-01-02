@@ -1,5 +1,12 @@
 package qg.models;
 
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.Table;
+
 /**
  * <h1>BusinessRep Class</h1>
  * <p>Holds the info for a business/company representatives</p>
@@ -7,11 +14,16 @@ package qg.models;
  * @version 1.0
  * @since 2018-11-20
  */
+@Entity
+@Table(name = "CompanyRep")
+@PrimaryKeyJoinColumn(referencedColumnName = "id")
 public class BusinessRep extends User {
 
     //Private data members:
-    
+	@Basic
+	@Column(name = "title")
 	private String title;
+	@OneToOne
 	private Business bus;
 	
 	//Constructors:
