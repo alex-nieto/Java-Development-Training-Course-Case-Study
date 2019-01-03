@@ -8,27 +8,62 @@ import org.springframework.web.servlet.ModelAndView;
 public class HomeController {
 
 	@RequestMapping("/")
-	public ModelAndView welcome() {
+	public ModelAndView Home() {
 		ModelAndView mav = new ModelAndView("index");
 		return mav;
 	}
 	
-	@RequestMapping("/first")
-	public ModelAndView firstPage() {
-		ModelAndView mav = new ModelAndView("first");
+	@RequestMapping("/review")
+	public ModelAndView reviewPage() {
+		ModelAndView mav = new ModelAndView("review");
 		return mav;
 	}
 	
-	@RequestMapping("/sec")
-	public ModelAndView secPage() {
-		ModelAndView mav = new ModelAndView("sec");
+	@RequestMapping("/profile")
+	public ModelAndView profilePage() {
+		ModelAndView mav = new ModelAndView("profile");
 		return mav;
 	}
 	
-	@RequestMapping("/third")
-	public ModelAndView thidPage() {
-		ModelAndView mav = new ModelAndView("third");
+	@RequestMapping("/editProfile")
+	public ModelAndView editProfilePage() {
+		ModelAndView mav = new ModelAndView("editProfile");
 		return mav;
 	}
 	
+	@RequestMapping("/signup")
+	public ModelAndView signupPage() {
+		ModelAndView mav = new ModelAndView("signup");
+		return mav;
+	}
+	
+	@RequestMapping("/company")
+	public ModelAndView companyPage() {
+		ModelAndView mav = new ModelAndView("company");
+		return mav;
+	}
+	
+	@RequestMapping("/repSignup")
+	public ModelAndView repSignupPage() {
+		ModelAndView mav = new ModelAndView("repSignup");
+		return mav;
+	}
+	
+	@RequestMapping("/companies")
+	public ModelAndView companiesPage() {
+		ModelAndView mav = new ModelAndView("companies");
+		return mav;
+	}
+	
+	@RequestMapping("/contact")
+	public ModelAndView contactPage() {
+		ModelAndView mav = new ModelAndView("contact");
+		return mav;
+	}
+	
+	@RequestMapping("/about")
+	public ModelAndView aboutPage() {
+		ModelAndView mav = new ModelAndView("about");
+		return mav;
+	}
 }
