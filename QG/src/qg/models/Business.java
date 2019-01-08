@@ -33,7 +33,7 @@ public class Business {
 	private String type;
 	@Basic
 	@Column(name = "rating")
-	private int avgRating;
+	private double avgRating;
 	@Basic
 	@Column(name = "safe")
 	private boolean safe;
@@ -128,7 +128,7 @@ public class Business {
 	 * method used to set avgRating value
 	 * @param avgRating - Business average review rating
 	 */
-	public void setRate(int avgRating) {
+	public void setRate(double avgRating) {
 		this.avgRating = avgRating;
 	}
 	
@@ -206,7 +206,7 @@ public class Business {
 	 * getAvgRating() - method returns business average review rating
 	 * @return business average review rating
 	 */
-	public int getAvgRating(){
+	public double getAvgRating(){
 	    return avgRating;
 	}
 	
